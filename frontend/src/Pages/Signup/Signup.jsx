@@ -2,17 +2,11 @@ import { useState, useEffect } from "react";
 import "./Signup.css";
 import FormInput from "../../Component/FormInput/Forminput";
 import { useNavigate } from "react-router-dom";
-// import { useDispatch, useSelector } from "react-redux";
 
 import { signUp } from "../../api/AuthRequest";
 const SignUp = () => {
-  // const msg = useSelector((state) => state.authReducer.message);
-  // console.log(msg, "jhdhd");
   const [errmsg, setErrMsg] = useState("");
-  // useEffect(() => {
-  //   console.log(msg, "latesterr");
-  //   if (msg) setErrMsg(msg);
-  // }, [msg]);
+
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -74,7 +68,6 @@ const SignUp = () => {
       required: true,
     },
   ];
-  // const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -97,9 +90,6 @@ const SignUp = () => {
   return (
     <div className="app">
       <form onSubmit={handleSubmit}>
-        {/* {errmsg && (
-          <p style={{ color: "red", textAlign: "center" }}>{errmsg}</p>
-        )} */}
         <h1>TEACHER SIGNUP</h1>
         {inputs.map((input) => (
           <FormInput

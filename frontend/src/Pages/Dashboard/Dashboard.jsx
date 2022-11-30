@@ -8,8 +8,6 @@ import Edit from "../../Component/Dashboardlist/Edit";
 import { useEffect } from "react";
 import { deleteStudent, getAllStudents } from "../../api/StudentRequest";
 
-// import { employeesData } from "../../data";
-
 function Dashboard() {
   const [students, setStudents] = useState("");
   const [selectedStudent, setSelectedStudent] = useState(null);

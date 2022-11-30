@@ -11,8 +11,9 @@ const FormInput = (props) => {
 
   return (
     <div className="formInput">
-      <label>{label}</label>
+      <label style={{ margin: "8px" }}>{label}</label>
       <input
+        style={{ margin: "0" }}
         className="logininput"
         {...inputProps}
         onChange={onChange}
